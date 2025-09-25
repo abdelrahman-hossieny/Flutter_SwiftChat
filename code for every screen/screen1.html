@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SwiftChat Splash Screen</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+    :root {
+      --primary-color: #38e07b;
+      --secondary-color: #2a9e57;
+      --background-color: #1a1a1a;
+      --text-primary: #e0e0e0;
+      --text-secondary: #a0a0a0;
+      --accent-color: #4ade80;
+    }
+    body {
+        font-family: 'Spline Sans', sans-serif;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[var(--background-color)] text-[var(--text-primary)]">
+<div class="relative flex size-full min-h-screen flex-col items-center justify-center dark group/design-root overflow-hidden p-4">
+<div class="flex flex-col items-center justify-center gap-6">
+<div class="bg-gray-800 p-6 shadow-lg rounded-full border border-gray-700">
+<svg class="h-24 w-24 text-[var(--primary-color)]" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="m22 2-7 20-4-9-9-4Z"></path>
+<path d="m22 2-11 11"></path>
+</svg>
+</div>
+<h1 class="text-4xl font-bold text-[var(--text-primary)]">SwiftChat</h1>
+</div>
+<div class="absolute bottom-8 text-center">
+<p class="text-sm text-[var(--text-secondary)]">Powered by Flutter</p>
+</div>
+</div>
+
+</body></html>

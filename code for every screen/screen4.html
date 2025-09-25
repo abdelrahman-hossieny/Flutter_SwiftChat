@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SwiftChat Conversation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style type="text/tailwindcss">
+    :root {
+      --primary-color: #38e07b;
+      --secondary-color: #2a9e57;
+      --background-color: #1a1a1a;
+      --text-primary: #e0e0e0;
+      --text-secondary: #a0a0a0;
+      --accent-color: #4ade80;
+      --surface-color: #2c2c2c;
+      --sent-bubble-color: #38e07b;
+      --received-bubble-color: #2c2c2c;
+      --sent-text-color: #1a1a1a;
+      --received-text-color: #e0e0e0;
+    }
+    body {
+      font-family: 'Spline Sans', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-primary);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[var(--background-color)]">
+<div class="flex flex-col h-screen">
+<header class="bg-[var(--background-color)] shadow-md sticky top-0 z-10 px-4 py-3 flex items-center justify-between border-b border-gray-700">
+<div class="flex items-center gap-3">
+<button class="icon_button">
+<span class="material-symbols-outlined text-[var(--text-primary)]">arrow_back_ios_new</span>
+</button>
+<div class="flex items-center gap-3">
+<div class="relative">
+<img alt="Sarah's profile picture" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs5iOUuisCb9z42NcDcfbhBAAlpnxKC7T2FfNBg48XUtxZJDloc11wn5Kv1PLy5oWd86M8V3U6Jgte4hJLEP-FbOQxv9q2JQGKdZLFt-51gkAUhHfOezejwnHp9JDGiyTq2DfTpC87dC5fBfl_JAhzjvjIobcRRaaL0yQbW9Z7UKDYXd9aBNRS3HGrF8x7mTh9uH8Ns_hClzah2JL-mRhTo9CAW0y0Mo5Oo4g6MN6NEDmPwJXy4oA9tt5s5K44n_0g6m7xIraRpJY"/>
+<span class="absolute bottom-0 right-0 block h-2.5 w-2.5 rounded-full bg-green-400 ring-2 ring-[var(--background-color)]"></span>
+</div>
+<div>
+<h1 class="text-lg font-bold text-[var(--text-primary)]">Sarah</h1>
+<p class="text-xs text-[var(--text-secondary)]">Online</p>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="icon_button">
+<span class="material-symbols-outlined text-[var(--text-primary)]">call</span>
+</button>
+<button class="icon_button">
+<span class="material-symbols-outlined text-[var(--text-primary)]">videocam</span>
+</button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto p-4 space-y-6">
+<div class="flex items-end gap-3">
+<img alt="Sarah's profile picture" class="w-8 h-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs5iOUuisCb9z42NcDcfbhBAAlpnxKC7T2FfNBg48XUtxZJDloc11wn5Kv1PLy5oWd86M8V3U6Jgte4hJLEP-FbOQxv9q2JQGKdZLFt-51gkAUhHfOezejwnHp9JDGiyTq2DfTpC87dC5fBfl_JAhzjvjIobcRRaaL0yQbW9Z7UKDYXd9aBNRS3HGrF8x7mTh9uH8Ns_hClzah2JL-mRhTo9CAW0y0Mo5Oo4g6MN6NEDmPwJXy4oA9tt5s5K44n_0g6m7xIraRpJY"/>
+<div class="bg-[var(--received-bubble-color)] text-[var(--received-text-color)] rounded-2xl rounded-bl-lg p-3 max-w-xs shadow">
+<p>Hey there! How's your day going?</p>
+</div>
+</div>
+<div class="flex items-end gap-3 justify-end">
+<div class="bg-[var(--sent-bubble-color)] text-[var(--sent-text-color)] rounded-2xl rounded-br-lg p-3 max-w-xs shadow">
+<p>Hi Sarah! It's been pretty good, just finished a workout. How about yours?</p>
+</div>
+</div>
+<div class="flex items-end gap-3">
+<img alt="Sarah's profile picture" class="w-8 h-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs5iOUuisCb9z42NcDcfbhBAAlpnxKC7T2FfNBg48XUtxZJDloc11wn5Kv1PLy5oWd86M8V3U6Jgte4hJLEP-FbOQxv9q2JQGKdZLFt-51gkAUhHfOezejwnHp9JDGiyTq2DfTpC87dC5fBfl_JAhzjvjIobcRRaaL0yQbW9Z7UKDYXd9aBNRS3HGrF8x7mTh9uH8Ns_hClzah2JL-mRhTo9CAW0y0Mo5Oo4g6MN6NEDmPwJXy4oA9tt5s5K44n_0g6m7xIraRpJY"/>
+<div class="bg-[var(--received-bubble-color)] text-[var(--received-text-color)] rounded-2xl rounded-bl-lg p-3 max-w-xs shadow">
+<p>That's awesome! Mine's been busy with work, but I'm about to relax with a good book. Any plans for the evening?</p>
+</div>
+</div>
+<div class="flex items-end gap-3 justify-end">
+<div class="bg-[var(--sent-bubble-color)] text-[var(--sent-text-color)] rounded-2xl rounded-br-lg p-3 max-w-xs shadow">
+<p>Sounds perfect! I'm thinking of catching up on some shows. Maybe we can chat later?</p>
+</div>
+</div>
+<div class="flex items-end gap-3">
+<img alt="Sarah's profile picture" class="w-8 h-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs5iOUuisCb9z42NcDcfbhBAAlpnxKC7T2FfNBg48XUtxZJDloc11wn5Kv1PLy5oWd86M8V3U6Jgte4hJLEP-FbOQxv9q2JQGKdZLFt-51gkAUhHfOezejwnHp9JDGiyTq2DfTpC87dC5fBfl_JAhzjvjIobcRRaaL0yQbW9Z7UKDYXd9aBNRS3HGrF8x7mTh9uH8Ns_hClzah2JL-mRhTo9CAW0y0Mo5Oo4g6MN6NEDmPwJXy4oA9tt5s5K44n_0g6m7xIraRpJY"/>
+<div class="bg-[var(--received-bubble-color)] text-[var(--received-text-color)] rounded-2xl rounded-bl-lg p-3 max-w-xs shadow">
+<p>Definitely! Have a great evening, and talk to you soon!</p>
+</div>
+</div>
+<div class="flex items-end gap-3">
+<img alt="Sarah's profile picture" class="w-8 h-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs5iOUuisCb9z42NcDcfbhBAAlpnxKC7T2FfNBg48XUtxZJDloc11wn5Kv1PLy5oWd86M8V3U6Jgte4hJLEP-FbOQxv9q2JQGKdZLFt-51gkAUhHfOezejwnHp9JDGiyTq2DfTpC87dC5fBfl_JAhzjvjIobcRRaaL0yQbW9Z7UKDYXd9aBNRS3HGrF8x7mTh9uH8Ns_hClzah2JL-mRhTo9CAW0y0Mo5Oo4g6MN6NEDmPwJXy4oA9tt5s5K44n_0g6m7xIraRpJY"/>
+<div class="bg-[var(--received-bubble-color)] text-[var(--text-secondary)] rounded-2xl rounded-bl-lg p-3 max-w-xs shadow">
+<div class="flex items-center space-x-1">
+<span class="block h-2 w-2 rounded-full bg-[var(--text-secondary)] animate-bounce [animation-delay:-0.3s]"></span>
+<span class="block h-2 w-2 rounded-full bg-[var(--text-secondary)] animate-bounce [animation-delay:-0.15s]"></span>
+<span class="block h-2 w-2 rounded-full bg-[var(--text-secondary)] animate-bounce"></span>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-[var(--background-color)] sticky bottom-0 z-10 px-4 py-3 border-t border-gray-700">
+<div class="flex items-center gap-3">
+<button class="icon_button">
+<span class="material-symbols-outlined text-[var(--text-secondary)]">add_circle</span>
+</button>
+<div class="flex-1 relative">
+<input class="w-full bg-[var(--surface-color)] border-none rounded-full py-3 pl-4 pr-12 text-[var(--text-primary)] placeholder:text-[var(--text-secondary)] focus:ring-2 focus:ring-[var(--primary-color)] transition duration-300" placeholder="Type a message..." type="text"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 icon_button">
+<span class="material-symbols-outlined text-[var(--text-secondary)]">sentiment_satisfied</span>
+</button>
+</div>
+<button class="bg-[var(--primary-color)] text-[var(--sent-text-color)] rounded-full p-3 flex-shrink-0 hover:bg-[var(--accent-color)] transition duration-300 shadow">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</footer>
+</div>
+
+</body></html>
