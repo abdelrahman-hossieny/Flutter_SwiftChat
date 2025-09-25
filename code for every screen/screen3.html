@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SwiftChat</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+    :root {
+      --primary-color: #38e07b;
+      --secondary-color: #2a9e57;
+      --background-color: #1a1a1a;
+      --text-primary: #e0e0e0;
+      --text-secondary: #a0a0a0;
+      --accent-color: #4ade80;
+    }
+    body {
+      font-family: 'Spline Sans', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-primary);
+    }
+    .soft-shadow {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[var(--background-color)] text-[var(--text-primary)]">
+<div class="relative flex size-full min-h-screen flex-col justify-between overflow-x-hidden">
+<div class="flex flex-col flex-grow">
+<header class="sticky top-0 z-10 bg-[var(--background-color)] bg-opacity-80 backdrop-blur-sm">
+<div class="flex items-center justify-between p-4">
+<div class="flex items-center gap-3">
+<img alt="User Profile" class="size-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT4DppZAfxuB8p7j93hfWqBSY0CSI_VkVkt8lBh7PBDG5HMOwzXQaiFBsXIVe8u2VT8isyhUt2FJqGenl0kEqmaF4eNG_9fm22-5rHxuPsABQJFcgAeFRh0awQbebzJXHD5BPu5tj-iEROK4KpP8kAx8Ka140Qlm1IPbLMAGpaey9Jv_FOOjSLn3-GeOHz3fKzOKB56AcV_7lngXcciaxf0R-DzNIe1aXY08BHlON5IdLQ_Smw1EtP4jydkE_QYjtBlJimnkl05dY"/>
+<h1 class="text-xl font-bold">SwiftChat</h1>
+</div>
+</div>
+</header>
+<main class="flex-grow overflow-y-auto px-4 pt-2 pb-24">
+<div class="space-y-2">
+<div class="flex items-center gap-4 rounded-2xl p-3 hover:bg-white/10 transition-colors duration-200">
+<div class="relative">
+<img alt="Sophia" class="size-14 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4NLh1Z0lnVF4DViz5kjXalsVG9Lh00AAXoij1sMHM2IhICM55CzQdPnmeFblnC9p2qtGfEg9QCWReYWSUQMwkCnBU3sp0Sou7No8364EzOLsXXP8G5Wi2cThtn11mB9QpKJq1ghtls2R4OWaAFwmmONgOg3mdjgQ5iBGLsRDdzsm_vLGQPFuUf0wZuSXpTtpypdkHhcDQwyG8JRnNpVZt2g3P1-tsuRCkNxRK9zNgl-oreRnKw1fLfvtlGNRe0i2w6fDBqd696V4"/>
+<span class="absolute bottom-0 right-0 block h-4 w-4 rounded-full border-2 border-[var(--background-color)] bg-[var(--primary-color)]"></span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-center">
+<p class="font-bold text-base text-[var(--text-primary)]">Sophia</p>
+<p class="text-xs text-[var(--text-secondary)]">10:30 AM</p>
+</div>
+<div class="flex justify-between items-start">
+<p class="text-sm text-[var(--text-secondary)] line-clamp-1">See you later!</p>
+<span class="flex items-center justify-center text-xs font-bold bg-[var(--secondary-color)] text-white rounded-full size-5 ml-2">2</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-2xl p-3 hover:bg-white/10 transition-colors duration-200">
+<img alt="Ethan" class="size-14 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhkIFf3oefcuuQ6yS3D0Ixxgqp0gN7Z8tNAAYZiKsuG0IAcnDugPIZ007gzbLNtgrYSjD9lwI9tKRmIjjj862vy_Ssz4O-SamD3zGK2IxWQAZGuSXAvgvySkV4rq-4kmLaMa-OvDhnIBPsjijkCyO6LUVTTNMdIl2xZ_wZ7pbxtmPDJ5WKDsj4iratOF8HPi8jmTyjewHgSOnV3xja3sQonxN5mU5TGkbzkEI-Y8TejuPq8imSdsWL_pIiAatsyNbJeoMaUSBkbpw"/>
+<div class="flex-grow">
+<div class="flex justify-between items-center">
+<p class="font-bold text-base text-[var(--text-primary)]">Ethan &amp; Mia</p>
+<p class="text-xs text-[var(--text-secondary)]">9:45 AM</p>
+</div>
+<p class="text-sm text-[var(--text-secondary)] line-clamp-1">Sounds good!</p>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-2xl p-3 hover:bg-white/10 transition-colors duration-200">
+<img alt="Olivia" class="size-14 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE8sCUenjFjWKgZZ3rJcDeWgl0ETNLNAVzceZ_FgT3cFkQuF7ZFO6SyXOvWvpp_79wsU8lMwDbWv99V_Vldw4svdvM2W6v3EbnW3KrXAg4gPoxVACn8l4Il9swIwPUE1JsNgvI0ipUZVh_LnZVLy_iKBxOohAR3SvdZGRhT-JtNbzOplOLMz9u9PihqiD31gOOnG2F5g4Kn_rSwuH6alqPkVOFw3wRIMyr1VxMIh-sR1pgmXwUuLIZLczxdKddS8hJTm2G9NWyh10"/>
+<div class="flex-grow">
+<div class="flex justify-between items-center">
+<p class="font-bold text-base text-[var(--text-primary)]">Olivia</p>
+<p class="text-xs text-[var(--text-secondary)]">Yesterday</p>
+</div>
+<p class="text-sm text-[var(--text-secondary)] line-clamp-1">I'm on my way</p>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-2xl p-3 hover:bg-white/10 transition-colors duration-200">
+<img alt="Noah" class="size-14 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMCaX9YtTyai9SUw8GRBQp8tT3T43j0l8CI9k9iwxl1KJIZuucNRdfB53bsIGx_t9qS5j6QlWp1KdEBDPjIf5BwY46vfTTe0nYFNEK41sxHSTK4KYTTNevg_Gwa__vpYUFpPXVWw0nUzQgrM_YMWKbztVijEwOAAi7kvbU9hNmrcg1LWEjb2cJ7GdaF7qSY8YznE1urx93568SfizncRj78BgYvSZOTK_HHNGAQDnAynun_MGBpaJnrJy9zrKm9oImHf66OUcGiUQ"/>
+<div class="flex-grow">
+<div class="flex justify-between items-center">
+<p class="font-bold text-base text-[var(--text-primary)]">Project Group</p>
+<p class="text-xs text-[var(--text-secondary)]">2 days ago</p>
+</div>
+<p class="text-sm text-[var(--text-secondary)] line-clamp-1">Let's meet at the usual spot</p>
+</div>
+</div>
+<div class="flex items-center gap-4 rounded-2xl p-3 hover:bg-white/10 transition-colors duration-200">
+<img alt="Ava" class="size-14 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1jO9B8o0_74C2A7b3oU2Mf6Ylr3sfmGUjer4hVbD4JKNvdEs8tVfgV2Al2U_Y9XrzizxVJY9Oe2XinhT3eJKwmEzYW6owdYfd2EHzK-rzGRt9U30-c6299suTeAsJ3zImJVM61uk4T6GlZc1vF17TRrbuwqxn8FKDkXdNEyzvCDkMleigTqZiEu92mE_ywLAu5yltKER8GP5icNOM5e89okrPAqPP55kRZGxKi3A948kP-36Ju4AZ2TxFNb4_AbdP0fdMiT6U4CY"/>
+<div class="flex-grow">
+<div class="flex justify-between items-center">
+<p class="font-bold text-base text-[var(--text-primary)]">Ava</p>
+<p class="text-xs text-[var(--text-secondary)]">3 days ago</p>
+</div>
+<p class="text-sm text-[var(--text-secondary)] line-clamp-1">I'll be there in 10 minutes</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+<div class="fixed bottom-8 right-6">
+<button class="flex items-center justify-center size-16 rounded-2xl bg-[var(--primary-color)] text-[var(--background-color)] soft-shadow hover:bg-[var(--accent-color)] transition-colors duration-200">
+<svg fill="currentColor" height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path>
+</svg>
+</button>
+</div>
+</div>
+
+</body></html>
